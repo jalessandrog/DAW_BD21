@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>LAB01 - Joseph Alessandro G</title>
+    </head>
+    <body>
+        <header>
+            <div class="info_personal">
+                <p><strong> Joseph Alessandro García García</strong></p>
+                <p><strong>A01701434</strong></p>
+                <a href="mailto:a01701434@itesm.mx"><strong>a01701434@itesm.mx</strong></a>
+            </div>
+            <hr>
+            <h1>Laboratorio 1: Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
+            <nav>
+                <menu class="barra_nav">
+                    <li><a href="#pregunta1">Pregunta</a></li>
+                    <li><a href="#pregunta2">Pregunta</a></li>
+                    <li><a href="#pregunta3">Pregunta</a></li>
+                    <li><a href="#pregunta4">Pregunta</a></li>
+                    <li><a href="#pregunta5">Pregunta</a></li>
+                    <li><a href="#pregunta6">Pregunta</a></li>
+                    <li><a href="#pregunta7">Pregunta</a></li>
+                    <li><a href="#pregunta8">Pregunta</a></li>
+                    <li><a href="#pregunta9">Pregunta</a></li>
+                    <li><a href="#pregunta10">Pregunta</a></li>
+                    <li><a href="#pregunta11">Pregunta</a></li>
+                    <li><a href="#pregunta12">Pregunta</a></li>
+                    <li><a href="#pregunta13">Pregunta</a></li>
+                </menu>
+            </nav>
+        </header>
+        <main>
+            <section class="preguntas">
+                <div id="pregunta1">
+                    <h2>¿Cuál es la diferencia entre Internet y la World Wide Web?</h2>
+                    <p>
+                        Internet es una red global de redes conectadas entre sí, mientras que la web o la World Wide Web (www) es una recopilación 
+                        o inmensa colección de información (páginas públicas accesibles) a las que podemos acceder a través de Internet. Asimismo, 
+                        la World Wide Web es uno de los servicios que se encuentra dentro de Internet.
+                    </p>
+                </div>
+                <div id="pregunta2">
+                    <h2>¿Cuáles son las partes de un URL?</h2>
+                    <p> Una url contiene los siguientes elementos:</p>
+                    <ul>
+                        <li> Protocolo HTTPS </li>
+                        <li> Subdominio </li>
+                        <li> Dominio </li>
+                        <li> Extension </li>
+                        <li> Sub-carpeta o directorio </li>
+                        <li> Parámetro o Query String </li>
+                        <li> Etiqueta </li>
+                    </ul>
+                </div>
+                <div id="pregunta3">
+                    <h2>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h2>
+                    <p>
+                        <span class="concepto">GET: </span>
+                        El método de petición GET se encarga de recuperar datos/información de la url a la que se hace el pedido, 
+                        es decir, obtenemos la información
+                        <br>
+                        <span class="concepto">HEAD:</span>
+                        El método HEAD solicita la misma información que el método GET, sin embargo, este no recibe el cuerpo de la respuesta.
+                        <br>
+                        <span class="concepto">POST:</span>
+                        El propósito del método POST es el envío de información al servidor o crear un nuevo recurso. Asimismo, otro de sus 
+                        propósitos es manipular datos sensibles.
+                        <br>
+                        <span class="concepto">PUT:</span>
+                        PUT como método HTTP se encarga de reemplazar información que existe.
+                        <br>
+                        <span class="concepto">PATCH:</span>
+                        El método PATCH tiene como propósito aplicar modificaciones parciales a un recurso.
+                        <br>
+                        <span class="concepto">DELETE:</span>
+                        Como su nombre lo menciona, el propósito del método DELETE es borrar información o un recurso existente en el servidor.
+                    </p>
+                </div>
+                <div id="pregunta4">
+                    <h2>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en 
+                        algún sitio? ¿Por qué?
+                    </h2>
+                    <p>
+                        El método por utilizar sería POST ya que este permite que enviemos información al servidor. Además, los datos que se envían 
+                        por POST viajan ocultos y queda encriptada la información.
+                    </p>
+                </div>
+                <div id="pregunta5">
+                    <h2>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h2>
+                    <p>
+                        El método GET se usa cuando accedemos a un sitio por URL o se hace clic en un vínculo.
+                    </p>
+                </div>
+                <div id="pregunta6">
+                    <h2>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h2>
+                    <p>
+                    El código 200 es una respuesta satisfactoria que significa que la solicitud ha sido exitosa por alguno de los métodos
+                    de petición como GET, POST, etc.
+                    <br>
+                    <em>OK → La petición se realizó con éxito.</em>
+                    </p>
+                </div>
+                <div id="pregunta7">
+                    <h2>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio 
+                        y se encontró con un error 404? ¿Por qué?
+                    </h2>
+                    <p>
+                        Depende, porque el error 404 ocurre cuando el servidor no encuentra un recurso que solicito el cliente, es decir, 
+                        puede tratarse de un contenido que ya no existe o que el desarrollador no quiere que una persona externa acceda.
+                        Aunque también puede suceder que el desarrollador haya cometido un error en el enlace y en este caso, el desarrollador
+                        si debe verificarlo y/o corregirlo. De igual forma el cliente debe verificar que esta escribiendo correctamente el enlace.
+                        <br>
+                        <em>Not Found → El recurso no fue encontrado.</em>
+                    </p>
+                </div>
+                <div id="pregunta8">
+                    <h2>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se 
+                        encontró con un error 500? 
+                        ¿Por qué?
+                    </h2>
+                    <p>
+                        Sí, porque el error 500 corresponde a un error interno de servidor que por lo general está relacionado con 
+                        configuraciones de la página. 
+                        <br>
+                        <em>Internal Server Error → Hubo un error en el servidor.</em>
+                    </p>
+                </div>
+                <div id="pregunta9">
+                    <h2>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? 
+                        Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.
+                    </h2>
+                    <p>
+                        Un atributo desaprobado significa que son partes del estándar HTML5 cuyo uso ya no se recomienda. 
+                        En otras palabras, es un elemento que se considera anticuado ante nuevas estructuras presentadas en actualizaciones.
+                        <br>
+                        Algunos elementos de HTML4 desaprobado en HTML5:
+                    </p>
+                    <ul>
+                        <li> applet </li>
+                        <li> basefont </li>
+                        <li> big </li>
+                        <li> center </li>
+                        <li> dir </li>
+                        <li> font </li>
+                    </ul>
+                </div>       
+                <div id="pregunta10">
+                    <h2>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h2>
+                    <p>
+                        Las principales diferencias entre HTML4 y HTML5 es que la última versión de HTML (HTML5) es mucho más dinámica y permite 
+                        incluir elementos multimedia. Asimismo, ofrece mayor seguridad en el sitio y está menos disponible a exploits debido a que 
+                        HTML5 es totalmente capaz de realizar cosas sin la necesidad de Javascript o similares. También esta última actualización 
+                        tiene mejor rendimiento y soporte móvil. Por último, una diferencia importante es que HTML5 se actualiza como un estándar 
+                        y va cubriendo las necesidades de la web.
+                    </p>
+                </div>
+                <div id="pregunta11">
+                    <h2>¿Cuáles son los principales controles de una forma HTML5?</h2>
+                    <p>
+                        Los principales controles de un formulario de HTML5 son: Texto (text, password, email, textarea), verificación (checkbox), 
+                        opciones (radio), fecha (date), archivos (file) y botones (submit, reset y button) 
+                    </p>
+                </div>
+                <div id="pregunta12">
+                    <h2>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: 
+                        <a href="http://html5test.com/">http://html5test.com/</a>
+                    </h2>
+                    <p>
+                        Utilizo Microsoft Edge y mi score es de 476 de 555.
+                    </p>
+                </div>
+                <div id="pregunta13">
+                    <h2>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h2>
+                    <article>
+                        <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+                        <p>El ciclo de vida de un Sistema de información consiste en las siguientes fases:</p>
+                        <ul>
+                            <li>Fase de planificación</li>
+                            <li>Fase de análisis</li>
+                            <li>Fase de diseño</li>
+                            <li>Fase de implementación</li>
+                            <li>Fase de mantenimiento</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+                        <p>El ciclo de desarrollo de un Sistema de información consiste en las siguientes fases:</p>
+                        <ul>
+                            <li>Planificación</li>
+                            <li>Definición de requisitos</li>
+                            <li>Diseño</li>
+                            <li>Desarrollo y pruebas</li>
+                            <li>Puesta en marcha</li>
+                            <li>Mantenimiento</li>
+                            <li>Dispocisión</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="referencias">
+                <hr class="mini-divisor">
+                <h4>REFERENCIAS</h4>
+                <div class="box">
+                    <p>
+                        admincomunicatefacil. (2019). Diferencias entre World Wide Web e Internet. <em>Yautalk</em>.  
+                        Recuperado de: <a href="https://www.yautalk.com/diferencias-world-wide-web-internet/">https://www.yautalk.com/diferencias-world-wide-web-internet/</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        MDN contributions. (2021). Métodos de petición HTTP. <em>MDN Web Docs.</em> Mozilla.org. Recuperado de:
+                        <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Methods">https://developer.mozilla.org/es/docs/Web/HTTP/Methods</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        MDN contributions. (2021). Códigos de estado de respuesta HTTP. <em>MDN Web Docs.</em> Mozilla.org. Recuperado de:
+                        <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status">https://developer.mozilla.org/es/docs/Web/HTTP/Status</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Aviani, G. (2019). An introduction to HTTP: everything you need to know. <em>freeCodeCamp.org</em> Recuperado de:
+                        <a href="https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/">https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/</a>
+    ‌               </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Ramírez, I. (2018). Errores 404, 500, 502, 504 y más en páginas web, ¿qué significan?. <em>Xataka.com.</em> Recuperado de:
+                        <a href="https://www.xataka.com/basics/errores-404-500-502-504-y-mas-en-paginas-web-que-significan ">https://www.xataka.com/basics/errores-404-500-502-504-y-mas-en-paginas-web-que-significan</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        De León, A . (2019). Error 500 - Internal Server Error. <em>Infranetworking</em> Recuperado de:
+                        <a href="https://blog.infranetworking.com/error-500/">https://blog.infranetworking.com/error-500/</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        W3C Recommendation. (s.f) 4 Conformance: requirements and recommendations. <em>W3C Recommendation.</em> Recuperado de: 
+                        <a href="https://www.w3.org/TR/1999/REC-html401-19991224/conform.html">https://www.w3.org/TR/1999/REC-html401-19991224/conform.html</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        TODO HTML. (s.f) 05.Tags y atributos desaprobados en HTML. <em>TODO HTML.</em> Recuperado de:
+                        <a href="https://sites.google.com/site/dwebhtml/reference/deprecated">https://sites.google.com/site/dwebhtml/reference/deprecated</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        TODO HTML. (s.f) Etiquetas. <em>TODO HTML.</em> Recuperado de:
+                        <a href="https://sites.google.com/site/dwebhtml/reference/tags">https://sites.google.com/site/dwebhtml/reference/tags</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Barron, B. (2021). HTML vs HTML5: Conoce las diferencias cruciales entre ellos. <em>Kinsta.</em> Recuperado de: 
+                        <a href="https://kinsta.com/es/blog/html-vs-html5/">https://kinsta.com/es/blog/html-vs-html5/</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Estepa, J. (s. f). Controles de formulario.  <em>Departamento de Informática del IES "Virgen del Espino"</em> Recuperado de:
+                        <a href="http://www.v-espino.com/~chema/daw2/controles.htm">http://www.v-espino.com/~chema/daw2/controles.htm</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Tecnologías Información. (2018). Ciclo de Vida de un Sistema de Información. <em>tecnologias-informacion.com</em> Recuperado de: 
+                        <a href="https://www.tecnologias-informacion.com/ciclodevida.html">https://www.tecnologias-informacion.com/ciclodevida.html</a>        
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Viewnext. (2018). El ciclo SDLC en 7 fases. <em>Viewnext</em>. Recuperado de: 
+                        <a href="https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/">https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        Pukocz, E. (2019). Partes de una URL con ejemplos y explicación fácil. <em>EP</em> Recuperado de: 
+                        <a href="https://edytapukocz.com/url-partes-ejemplos-facil/">https://edytapukocz.com/url-partes-ejemplos-facil/</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <a href="https://code.visualstudio.com/"><h2>Visual Studio Code</h2></a>
+            <p>Este HTML fue elaborado en Visual Studio Code</p>
+        </footer>
+    </body>
+</html>

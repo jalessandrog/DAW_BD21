@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    background-color: #fff;
+}
+header{background-color: teal}
+header hr{opacity: 40%;}
+.info_personal{ 
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 15px;
+    color: rgba(206, 206, 206, 0.9);
+    background-color: #262626;
+}
+.info_personal a{
+    text-decoration: none; 
+    color: rgb(67, 85, 138);
+}
+h1{
+    margin: 5px 0;
+    padding: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+.barra_nav{
+    display: flex; 
+    list-style-type:decimal;
+    justify-content: space-around;
+    font-size: 14px;
+    color: teal;
+    background-color: rgb(250, 167, 12);
+    padding: 5px 0;
+}
+.barra_nav li{padding:0 7px;}
+.barra_nav a{text-decoration: none;}
+.preguntas{
+    width: 1000px;
+    margin: auto;
+    padding: 10px 0;
+}
+.preguntas h2{ 
+    font-family: 'HappeoFont', 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: justify; 
+}
+.preguntas div{
+    margin: 15px 0;
+    padding: 5px 0;
+}
+.preguntas p, .preguntas article{
+    text-align: justify;
+    margin: 7px 0;
+    padding: 3px 0;
+    color: rgb(88, 89, 90);
+}
+.preguntas ul{
+    padding: 0 35px;
+    list-style-type: circle;
+    color: rgb(88, 89, 90);
+} 
+.concepto{
+    color: #3e7398;
+    font-weight: bold;
+}
+.mini-divisor{
+    background: #f3f3f6;
+    border: none;
+    height: 7px;
+    margin: 10px 0;
+    outline: none;
+    width: 70px;
+}
+.referencias{
+    width: 1000px;
+    margin: auto;
+    padding: 5px 20px;
+    background-color: rgba(88, 89, 90, .2);
+}
+.referencias .box{
+    margin: 3px 0;
+    padding: 2px 0;
+    font-size: 10px;
+    text-align: justify;
+}
+footer{
+    padding: 10px 0;
+    text-align: center;
+    background-color: #262626;
+    color: #fff;
+}
+footer a{color:  teal ;}

@@ -47,6 +47,7 @@ h1{
     margin: auto;
     padding: 10px 0;
 }
+
 .preguntas h2{ 
     font-family: 'HappeoFont', 'Helvetica', 'Arial', sans-serif;
     font-weight: bold;
@@ -71,6 +72,11 @@ h1{
 .concepto{
     color: #3e7398;
     font-weight: bold;
+}
+.figura{text-align: center;}
+.figura p{
+    font-size: 9px;
+    text-align: center;
 }
 .mini-divisor{
     background: #f3f3f6;

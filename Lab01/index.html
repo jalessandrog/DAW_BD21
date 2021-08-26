@@ -35,6 +35,13 @@
                     <ul><a href="#pregunta15">Pregunta 15</a></ul>
                     <ul><a href="#pregunta16">Pregunta 16</a></ul>
                     <ul><a href="#pregunta17">Pregunta 17</a></ul>
+                    <ul><a href="#pregunta18">Pregunta 18</a></ul>
+                    <ul><a href="#pregunta19">Pregunta 19</a></ul>
+                    <ul><a href="#pregunta20">Pregunta 20</a></ul>
+                    <ul><a href="#pregunta21">Pregunta 21</a></ul>
+                    <ul><a href="#pregunta22">Pregunta 22</a></ul>
+                    <ul><a href="#pregunta23">Pregunta 23</a></ul>
+                    <ul><a href="#pregunta24">Pregunta 24</a></ul>
                 </ul>
             </nav>
         </header>
@@ -268,6 +275,91 @@
                         o redundantes de un recurso sin que se vea afectada la forma en que los navegadores lo procesan.
                     </p>
                 </div>
+                <h2 class="tituloLabs" id="Lab05">Lab05: Fundamentos de JavaScript </h2>
+                <hr>
+                <div id="pregunta19">
+                    <h3>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3>
+                    <p>
+                        Java es un lenguaje que hay que compilar y para ello es necesario utilizar la JVM (Java Virtual Machine) 
+                        para que el código pueda ser interpretado por la «máquina».
+                        <br>
+                        JavaScript es un lenguaje interpretado ya que se lee y traduce directamente a medida que se ejecuta el programa. 
+                        Además, en sus inicios, este lenguaje fue pensado para utilizarse principalmente en navegadores web como Firefox, Chrome o Safari;
+                        <br>
+                        Algunas diferencia entre estos dos lenguajes son:
+                        <br>
+                        <ul>
+                            <li>Compilador: Java necesita un Kit de desarrollo y un compilador. Mientras que, Javascript no necesita que sus programas se compilen</li>
+                            <li>Orientado a objetos: Java es un lenguaje orientado a objetos. Javascript es un lenguaje "multiparadigma" no requiere programar orientado a objetos, sin embargo, sí lo permite.</li>
+                            <li>Propósito: Java es un lenguaje de propósito general y Javascript sólo podemos escribir programas para que se ejecuten en páginas web o para aplicaciones como programas de consola, aplicaciones para móviles, de escritorio, etc. </li>
+                            <li>Tipado estático: Java es un lenguaje de programación fuertemente tipado. Mientras que Javascript es un lenguaje de tipado dinámico. </li>
+                            <li>Lenguaje abierto / lenguaje propietario: Javascript está basado en un estándar abierto, es decir, cualquier fabricante puede implementarlo en sus sistemas libremente. Sin embargo, Java es un lenguaje propiedad de una empresa, por lo que está dirigido con un enfoque particular y comercial.</li>
+                        </ul> 
+                        Algunas semejanzas entre estos dos lenguajes son:
+                        <br>
+                        <ul>   
+                            <li>Clases: Ambos lenguajes de programación contienen clases</li>
+                            <li>Orientado a Objetos: Tanto Java y JavaScript puede utilzarse como orientado a objetos</li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="pregunta20">
+                    <h3>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</h3>
+                    <p>
+                        <ul>
+                            <li>getFullYear()</li>
+                            <li>getMonth()</li>
+                            <li>getDate()</li>
+                            <li>getDay()</li>
+                            <li>getHours()</li>
+                            <li>getSeconds() / getMilliseconds() / getTime()</li>
+                            <li>toString() / toDateString() / toTimeString()</li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="pregunta21">
+                    <h3>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h3>
+                    <p>
+                        <ul>
+                            <li>forEach()</li>
+                            <li>push()</li>
+                            <li>pop()</li>
+                            <li>unshift()</li>
+                            <li>shift()</li>
+                            <li>indexOf()</li>
+                            <li>splice()</li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="pregunta22">
+                    <h3>¿Cómo se declara una variable con alcance local dentro de una función?</h3>
+                    <p>
+                        Let: es una variable que solo vive dentro del bloque en el que se declaro o función.
+                        <em>let variable</em>
+                    </p>
+                </div>
+                <div id="pregunta23">
+                    <h3>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h3>
+                    <p>
+                        Al utilizar una variable global dentro de función, puede ocasionar problemas ya que está variable
+                        puede seguir conservando el valor de la función anterior, o bien, se puede modificar y ocasionar errores en 
+                        la siguiente función que la utilizará
+                    </p>
+                </div>
+                <div id="pregunta24">
+                    <h3>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?
+                        ¿Para qué podrías utilizar esto en una aplicación web?</h3>
+                    <p>
+                        <ul>
+                            <li>search():Prueba una coincidencia en una cadena. Devuelve el índice de la coincidencia, o -1 si la búsqueda falla.</li>
+                            <li>exec(): Ejecuta una búsqueda por una coincidencia en una cadena. Devuelve un arreglo de información o null en una discrepancia.</li>
+                        </ul>
+                        Con el método search() se puede utilzar para buscar patrones especificos en url o algun objeto.
+                        Con el método exec(), podría servir para separar en una cadena por patrones especificos. Por ejemplo,
+                        extraer los elementos que conforman una url utilizando el método exec() que extraiga mediante patrones para analizar 
+                        URL, ("/","#", etc)
+                    </p>
+                </div>
             </section>
             <div class="posicionBoton">
                 <a href="#navegacion"><button class="myButton">menu</button></a>
@@ -291,6 +383,18 @@
                     <p>
                         MDN contributions. (2021). Códigos de estado de respuesta HTTP. <span>MDN Web Docs.</span> Mozilla.org. Recuperado de:
                         <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status">https://developer.mozilla.org/es/docs/Web/HTTP/Status</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        MDN contributions. (2021). Expresiones Regulares. <span>MDN Web Docs.</span> Mozilla.org. Recuperado de:
+                        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions</a>
+                    </p>
+                </div>
+                <div class="box">
+                    <p>
+                        MDN contributions. (2021). Array <span>MDN Web Docs.</span> Mozilla.org. Recuperado de:
+                        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
                     </p>
                 </div>
                 <div class="box">
@@ -400,6 +504,30 @@
                         PageSpeed Insights. (2018). Minificar recursos (HTML, CSS y JavaScript). <span>PageSpeed Insights.</span>  Recuperado de: 
                         <a href="https://developers.google.com/speed/docs/insights/MinifyResources?hl=es">https://developers.google.com/speed/docs/insights/MinifyResources?hl=es</a>
                    </p>
+                </div>
+                <div class="box">
+                   <p>
+                       Alvarez, M.  (2021). Diferencias entre Java y Javascript. <span>Desarrolloweb.com</span> Recuperado de:
+                        <a href="https://desarrolloweb.com/articulos/492.php">https://desarrolloweb.com/articulos/492.php</a>
+                    </p>
+                </div>
+                <div class="box">
+                   <p>
+                        Barbier, L. (2014). ¿Cuál es la diferencia entre Java vs JavaScript? <span>Wild Code School.</span>  ‌ Recuperado de: 
+                        <a href=" https://www.wildcodeschool.com/es-ES/blog/diferencia-entre-java-vs-javascript"> https://www.wildcodeschool.com/es-ES/blog/diferencia-entre-java-vs-javascript</a>
+                    </p>
+                </div>
+                <div class="box">
+                   <p>
+                        Digital Learning. (2016). Métodos del objeto Date. <span>Digital Learning.</span>  Recuperado de:  
+                        <a href="https://www.digitallearning.es/intro-programacion-js/metodos-date.html">https://www.digitallearning.es/intro-programacion-js/metodos-date.html</a>
+                    </p>
+                </div>
+                <div class="box">
+                   <p>
+                        <span></span>  Recuperado de:  
+                        <a href="https://www.arkaitzgarro.com/javascript/capitulo-11.html#metodos">https://www.digitallearning.es/intro-programacion-js/metodos-date.html</a>
+                    </p>
                 </div>
             </section>
         </main>

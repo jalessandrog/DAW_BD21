@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    background-color: #fff;
+}
+header{
+    background-color: teal;
+    width: 100%;
+}
+header hr{opacity: 40%;}
+.info_personal{ 
+    padding: .5em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: .8em;
+    color: rgba(206, 206, 206, 0.9);
+    background-color: #262626;
+}
+.info_personal a{
+    text-decoration: none; 
+    color: rgb(67, 85, 138);
+}
+h1, h2, h3, h4{ font-family: 'HappeoFont', 'Helvetica', 'Arial', sans-serif;}
+h1{
+    margin: 0 0;
+    padding: .5em .8em;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+}
+.barra_nav{
+    display: flex;
+    list-style-type: decimal;
+    justify-content: space-between;
+    font-size: .9rem;
+    color: teal;
+    background-color: rgb(250, 167, 12);
+    padding: .5em 1.9em;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-between;
+}
+.barra_nav ul{padding:0 7px;}
+.barra_nav a{
+    text-decoration: none;
+    color: teal;
+}
+.barra_nav a:hover{
+    color:rgb(115, 8, 17);
+    font-weight: bold;
+}
+main{
+    width: 100%;
+    margin: auto;
+}
+.preguntas h2, .ejercicios h2{
+    font-weight: bold;
+    font-size: 1.3em;
+    color: rgb(5, 96, 72);
+}
+.preguntas{
+    width: 50%;
+    margin: auto;
+    padding: 1em 1.5em;
+}
+.ejercicios{
+    width: 50%;
+    margin: auto;
+    padding: 2em 1.5em;
+}
+.preguntas h3{ 
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: justify; 
+}
+.preguntas div{
+    margin: 1em 0;
+    padding: .5em 0;
+}
+.preguntas p, .preguntas article{
+    text-align: justify;
+    margin: .5em 0;
+    padding: .2em 0;
+    color: rgb(88, 89, 90);
+}
+.preguntas ul{
+    padding: 0 2em;
+    list-style-type: circle;
+    color: rgb(88, 89, 90);
+} 
+span{
+    font-style: italic;
+    font-weight: bold;
+}
+.concepto{color: #3e7398;}
+.respuestaServidor{padding: 0 1em;}
+.respuestaServidor#positiva{ color: green;}
+.respuestaServidor#error{ color: red;}
+.figura{text-align: center;}
+.figura img{width: 80%;}
+.figura p{
+    font-size: .52em;
+    text-align: center;
+}
+.mini-divisor{
+    background: #f3f3f6;
+    border: none;
+    height: 7px;
+    margin: 10px 0;
+    outline: none;
+    width: 7em;
+}
+.referencias{
+    width: 50%;
+    margin: auto;
+    padding: 1em;
+    background-color: rgba(88, 89, 90, .2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    align-content: center;
+}
+.referencias .box{
+    padding: .2em 0;
+    font-size: .7em;
+    text-align: justify;
+}
+.referencias span{font-weight: normal;}
+
+.myButton a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.myButton{
+    margin-top: .5em;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+    border: none;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:.5em 1.5em;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton#menu {
+    position: relative;
+    top: 190px;
+    left: 93%;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bda209 5%, #b8870b 100%);
+    box-shadow: 0px 10px 14px -7px #9e6e08;
+    background-color:#cfb20d;
+}
+.myButton:active {
+	position:relative;
+	top: 15px;
+    background-color:  rgb(250, 167, 12);
+}
+
+footer{
+    width: 100%;
+    padding: .5em 0;
+    text-align: center;
+    background-color: #262626;
+    color: #fff;
+}
+footer a{color:  teal ;}
+
+@media (max-width: 700px){
+    .preguntas, .ejercicios{
+        width: 90%;
+        margin: auto;
+        padding: 1em 1.5em;
+    }
+    .referencias{
+        width: 90%;
+    }
+    .myButton{
+        display: none;
+    }
+    
+}

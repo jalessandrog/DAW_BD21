@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script src="js.js"></script> -->
+        <script type = "text/javascript" src = "script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>LABORATORIOS- Joseph Alessandro Garcia</title>
+    </head>
+    <body>
+        <header>
+            <div class="info_personal">
+                <p><strong> Joseph Alessandro García García</strong></p>
+                <p><strong>A01701434</strong></p>
+                <a href="mailto:a01701434@itesm.mx"><strong>a01701434@itesm.mx</strong></a>
+            </div>
+            <hr>
+            <h1>LABORATORIOS 06</h1>
+            <nav id="navegacion">
+                <ul class="barra_nav">
+                    <ul><a href="#pregunta01">Pregunta 1</a></ul>
+                    <ul><a href="#pregunta02">Pregunta 2</a></ul>
+                    <ul><a href="#pregunta03">Pregunta 3</a></ul>
+                    
+                    <ul><a href="#ejercicio01">Ejercicio 1</a></ul>
+                    <ul><a href="#ejercicio02">Ejercicio 2</a></ul>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            
+            <section class="preguntas">
+            <h2 class="tituloLabs" id="Lab05">Lab06: Programación orientada a eventos </h2>
+            <hr>
+                <div id="pregunta01">
+                    <h3>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</h3>
+                    <p>
+                        Gracias a que se puede validar los inputs desde Javascript se evita que se envíe y guarde información erronea en el servidor
+                        y de esta forma evitar problemas futuros en la base de datos, o en general, en todo aquello correspondiente al backend.
+                    </p>
+                </div>
+                <div id="pregunta02">
+                    <h3>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</h3>
+                    <p>
+                        Existen diversas formas para saltarse la seguridad, dos de ellas son:
+                        <ul>
+                            <li>Desactivar del navegador el lenguaje de JavaScript</li>
+                            <li>Modificando desde la consola las input que tienen algun requisito obligatorio</li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="pregunta03">
+                    <h3>Si te puedes saltar la seguridad de las validaciones de JavaScript, 
+                        entonces ¿por qué la primera pregunta dice que es una buena práctica?</h3>
+                    <p>
+                        Porque con JavaScript solo se realizarán validaciones para evitar enviar al servidor datos con errores,
+                        eso no sustituye las practicas de seguridad que el desarrollador debe implementar en la aplicación web.
+                        Por ejemplo, librerias de NodeJS como Bcrypt para cifrar contraseñas, etc.
+                    </p>
+                </div>
+            </section>
+            <section class="ejercicios">
+                <div id="ejercicio01">
+                    <h3>Ejercicio 1</h3>
+                    <p> Desarrolla una página para validar passwords. La página debe tener una forma con 2 campos, 
+                        el campo de password, y el campo de verificar password. Utiliza al máximo tu creatividad e 
+                        ingeniería para que la página sea un validador de passwords de estado del arte, con la mejor 
+                        experiencia para el usuario.
+                    </p>
+                    <a href="/Lab06/validacion.html"><button class="myButton">Validacion de contraseña</button></a>
+                </div>
+                <div id="ejercicio02">
+                    <h3>Ejercicio 2</h3>
+                    <p> desarrolla una página para vender 3 productos de tu interés, con los precios y promociones a tu gusto. 
+                        La página debe permitir al usuario escoger la cantidad de unidades de cada producto, y debe mostrar el precio 
+                        total, el IVA que se está cargando, y toda la información que consideres pertinente para que la experiencia del 
+                        usuario sea la mejor. La página debe validar los rangos de las unidades de cada producto.
+                    </p>
+                    <a href="/Lab06/venderProductos.html"><button class="myButton">Vender productos</button></a>
+                </div>
+            </section>
+            <div class="posicionBoton">
+                <a href="#navegacion"><button class="myButton" id="menu">menu</button></a>
+            </div>
+        </main>
+        <hr>
+        <footer>
+            <a href="https://code.visualstudio.com/"><h3>Visual Studio Code</h3></a>
+            <p>Este HTML fue elaborado en Visual Studio Code</p>
+        </footer>     
+    </body>
+</html>

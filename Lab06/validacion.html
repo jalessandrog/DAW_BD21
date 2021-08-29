@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script src="js.js"></script> -->
+        <script type = "text/javascript" src = "script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Validación de contraseña- Joseph Alessandro Garcia</title>
+    </head>
+    <body>
+        <header>
+            <div class="info_personal">
+                <p><strong> Joseph Alessandro García García</strong></p>
+                <p><strong>A01701434</strong></p>
+                <a href="mailto:a01701434@itesm.mx"><strong>a01701434@itesm.mx</strong></a>
+            </div>
+            <hr>
+            <h1><a href="/Lab06/index.html">LABORATORIOS 06</a></h1>
+        </header>
+        <main class="validacion">
+            <section class="preguntas">
+                <h2 class="tituloLabs" id="Lab06">Validación de Contraseña</h2>
+                <hr>
+                <div id="ejercicio01">
+                    <h3 onmouseover="validacion_fontstyle()">Ejercicio 1</h3>
+                    <p> Desarrolla una página para validar passwords. La página debe tener una forma con 2 campos, 
+                        el campo de password, y el campo de verificar password. Utiliza al máximo tu creatividad e 
+                        ingeniería para que la página sea un validador de passwords de estado del arte, con la mejor 
+                        experiencia para el usuario.
+                    </p>
+                </div>
+                <button class="myButton" id="ejercicio_validacion" onclick= "ejercicio_validacion()" >Ejercicio 1</button>
+                <div class="form-container" id="form-container">
+                    <form class="form" id="form" onsubmit="submit()" hidden>
+                        <p>
+                            <label class="label-1">
+                                Correo electronico
+                                <br>
+                                <input type="text" name="Correo electronico" id="correo" oninvalid="requerido()" placeholder="nombre_usuario@organización.com" required>
+                                <p id="error" hidden>Por favor rellena este campo</p>
+                            </label>
+                        </p>
+                        <p>
+                            <label class="label-1">
+                                Contraseña
+                                <br>
+                                <input type="password" name="Contraseña" id="contraseña" placeholder="Contraseña" required>
+                                <p id="error2" hidden>Por favor rellena este campo</p>
+                            </label>
+                        </p>
+                        <p>
+                            <label class="label-1">
+                                Confirmar contraseña
+                                <br>
+                                <input type="password" name="contraseña2" id="contraseña2" placeholder="Confirmar Contraseña" required>
+                                <p id="error3" hidden>Por favor rellena este campo</p>
+                            </label>
+                        </p>
+                        <p id="mensaje" hidden>Las contraseñas coinciden</p>
+                        <p class="buttons">
+                            <button class="myButton" id="submit" type="submit" onclick="verificar()">Ingresar</button>
+                         </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <a href="https://code.visualstudio.com/"><h3>Visual Studio Code</h3></a>
+            <p>Este HTML fue elaborado en Visual Studio Code</p>
+        </footer>
+    </body>
+</html>

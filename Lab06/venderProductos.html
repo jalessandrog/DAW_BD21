@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Vender productos- Joseph Alessandro Garcia</title>
+    </head>
+    <body>
+        <header>
+            <div class="info_personal">
+                <p><strong> Joseph Alessandro García García</strong></p>
+                <p><strong>A01701434</strong></p>
+                <a href="mailto:a01701434@itesm.mx"><strong>a01701434@itesm.mx</strong></a>
+            </div>
+            <hr>
+            <h1><a href="/Lab06/index.html">LABORATORIOS 06</a></h1>
+        </header>
+        <main class="tienda_online">
+            <section class="preguntas">
+                <h2 class="tituloLabs" id="Lab06">Vender Productos</h2>
+                <hr>
+                <div id="ejercicio01">
+                    <h3 onmouseover="validacion_fontstyle()">Ejercicio 2 </h3>
+                    <p> Desarrolla una página para vender 3 productos de tu interés, con los precios y promociones a tu gusto. 
+                        La página debe permitir al usuario escoger la cantidad de unidades de cada producto, y debe mostrar el precio 
+                        total, el IVA que se está cargando, y toda la información que consideres pertinente para que la experiencia del 
+                        usuario sea la mejor. La página debe validar los rangos de las unidades de cada producto.
+                    </p>
+                </div>
+                <button class="myButton" id="" onclick="mostrar_tabla()">Ejercicio 2</button>
+                <table class="tablas" id="tabla" hidden>
+                    <caption>TIENDA DE VIDEOJUEGOS EN LINEA</caption>
+                    <tr>
+                        <th>Articulo</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>IVA</th>
+                        <th>Total sin IVA</th>
+                        <th>Total con IVA</th>
+                    </tr>
+                    <tr>
+                        <td ><img src="/Lab06/images/skyrim.jpg" alt="Skyrim"></td>
+                        <td>Skyrim</td>   
+                        <td><input id="precio1" type="number" value="500" readonly></td>
+                        <td><input id="cantidad1" type="number" value=0 max="20" min="0" onchange="total1()"></td>
+                        <td><p id="IVA1"></p></td>
+                        <td><p id="total_sinIVA1"></p></td>
+                        <td><p id="total_conIVA1"></p></td>
+                    </tr>
+                    <tr>
+                        <td ><img src="/Lab06/images/bloodborne.jpg" alt="bloodborne"></td>
+                        <td>Bloodborne</td>   
+                        <td><input id="precio2" type="number" value="970.80" readonly></td>
+                        <td><input id="cantidad2" type="number" value=0 max="20" min="0" onchange="total2()"></td>
+                        <td><p id="IVA2"></p></td>
+                        <td><p id="total_sinIVA2"></p></td>
+                        <td><p id="total_conIVA2"></p></td>
+                    </tr>
+                    <tr>
+                        <td ><img src="/Lab06/images/Fallout4.jpg" alt="Fallout4"></td>
+                        <td>Fallout 4</td>   
+                        <td><input id="precio3" type="number" value=530.50 readonly></td>
+                        <td><input id="cantidad3" type="number" value=0 max="20" min="0" onchange="total3()"></td>
+                        <td><p id="IVA3"></p></td>
+                        <td><p id="total_sinIVA3"></p></td>
+                        <td><p id="total_conIVA3"></p></td>
+                    </tr>
+                    <tr>
+                        <td ><img src="/Lab06/images/DevilMyCry5.png" alt="DevilMyCry5"></td>
+                        <td>Devil My Cry 5 </td>   
+                        <td><input id="precio4" type="number" value="600.99" readonly></td>
+                        <td><input id="cantidad4" type="number" value=0 max="20" min="0" onchange="total4()"></td>
+                        <td><p id="IVA4"></p></td>
+                        <td><p id="total_sinIVA4"></p></td>
+                        <td><p id="total_conIVA4"></p></td>
+                    </tr>
+                    <tr>
+                        <td ><img src="/Lab06/images/The witcher 3.jpg" alt="The witcher 3"></td>
+                        <td>The witcher 3 </td>   
+                        <td><input id="precio5" type="number" value="1325.50" readonly></td>
+                        <td><input id="cantidad5" type="number" value=0 max="20" min="0" onchange="total5()"></td>
+                        <td><p id="IVA5"></p></td>
+                        <td><p id="total_sinIVA5"></p></td>
+                        <td><p id="total_conIVA5"></p></td>
+                    </tr>
+                </table>
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <a href="https://code.visualstudio.com/"><h3>Visual Studio Code</h3></a>
+            <p>Este HTML fue elaborado en Visual Studio Code</p>
+        </footer>
+          <!-- <script src="js.js"></script> -->
+          <script type = "text/javascript" src = "script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    background-color: #fff;
+}
+header{
+    background-color: teal;
+    width: 100%;
+}
+header hr{opacity: 40%;}
+.info_personal{ 
+    padding: .5em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: .8em;
+    color: rgba(206, 206, 206, 0.9);
+    background-color: #262626;
+}
+.info_personal a{
+    text-decoration: none; 
+    color: rgb(67, 85, 138);
+}
+h1, h2, h3, h4{ font-family: 'HappeoFont', 'Helvetica', 'Arial', sans-serif;}
+h1{
+    margin: 0 0;
+    padding: .5em .8em;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+}
+.barra_nav{
+    display: flex;
+    list-style-type: decimal;
+    justify-content: space-between;
+    font-size: .9rem;
+    color: teal;
+    background-color: rgb(250, 167, 12);
+    padding: .5em 1.9em;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-between;
+}
+.barra_nav ul{padding:0 7px;}
+.barra_nav a{
+    text-decoration: none;
+    color: teal;
+}
+.barra_nav a:hover{
+    color:rgb(115, 8, 17);
+    font-weight: bold;
+}
+main{
+    width: 100%;
+    margin: auto;
+}
+.preguntas h2, .ejercicios h2{
+    font-weight: bold;
+    font-size: 1.3em;
+    color: rgb(5, 96, 72);
+}
+.preguntas{
+    width: 50%;
+    margin: auto;
+    padding: 1em 1.5em;
+}
+.ejercicios{
+    width: 50%;
+    margin: auto;
+    padding: 2em 1.5em;
+}
+.preguntas h3{ 
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: justify; 
+}
+.preguntas div{
+    margin: 1em 0;
+    padding: .5em 0;
+}
+.preguntas p, .preguntas article, .ejercicios p{
+    text-align: justify;
+    margin: .5em 0;
+    padding: .2em 0;
+    color: rgb(88, 89, 90);
+}
+.preguntas ul{
+    padding: 0 2em;
+    list-style-type: circle;
+    color: rgb(88, 89, 90);
+} 
+span{
+    font-style: italic;
+    font-weight: bold;
+}
+.concepto{color: #3e7398;}
+.respuestaServidor{padding: 0 1em;}
+.respuestaServidor#positiva{ color: green;}
+.respuestaServidor#error{ color: red;}
+.figura{text-align: center;}
+.figura img{width: 80%;}
+.figura p{
+    font-size: .52em;
+    text-align: center;
+}
+table.tablas {
+    margin: 1rem;
+    table-layout:auto;
+    width: 60%;
+    border: 3px solid teal;
+    background-color: rgba(0, 128, 128, 0.469);
+}
+.tablas tbody tr:nth-child(odd) {background-color: rgb(250, 167, 12);}
+.tablas tbody tr:nth-child(even) {background-color: teal;}
+.tablas thead th:nth-child(1) {width: 40%;}
+.tablas thead th:nth-child(2) {width: 10%;}
+.tablas thead th:nth-child(3) {width: 30%;}
+.tablas th {padding: .5rem 2rem;}
+
+.tablas tbody td {
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-size: bold;
+}
+.tablas thead th, tfoot th, .tablas caption{font-family: 'Rock Salt', cursive;}
+
+.mini-divisor{
+    background: #f3f3f6;
+    border: none;
+    height: 7px;
+    margin: 10px 0;
+    outline: none;
+    width: 7em;
+}
+.referencias{
+    width: 50%;
+    margin: auto;
+    padding: 1em;
+    background-color: rgba(88, 89, 90, .2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    align-content: center;
+}
+.referencias .box{
+    padding: .2em 0;
+    font-size: .7em;
+    text-align: justify;
+}
+.referencias span{font-weight: normal;}
+
+.myButton a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.myButton{
+    margin: 1.5rem;
+    margin-top: .5em;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+    border: none;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:.5em 1.5em;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton#menu {
+    position: relative;
+    top: 0;
+    left: 93%;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bda209 5%, #b8870b 100%);
+    box-shadow: 0px 10px 14px -7px #9e6e08;
+    background-color:#cfb20d;
+}
+.myButton:active {
+	position:relative;
+	top: 15px;
+    background-color:  rgb(250, 167, 12);
+}
+
+
+/*---------------------------------------
+                #VALIDACIÓN DE CONTRASEÑAS
+---------------------------------------*/
+.validacion{
+    height: 85vh;
+}
+.validacion .preguntas .form-container{
+    margin: 10rem auto;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+.form-container .buttons{
+    display: flex;
+    justify-content: center;
+}
+.form-container label.label-1 input, 
+label.label-date input,  
+label.label-textarea textarea, 
+label.label-select select{
+    margin: 2px 0;
+    height: 35px;
+    text-align: center;
+    padding: 5px 0;
+    border-style: none;
+    border-radius: 13px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+.form-container label.label-1 input:focus
+{
+    outline: 2px   solid darkorange;
+}
+
+/*---------------------------------------
+                #EJERCICIO 2
+---------------------------------------*/
+.tienda_online{
+    height: 200vh;
+}
+
+.tienda_online .tablas th:nth-last-child(-n+3),
+.tienda_online .tablas td:nth-last-child(-n+3)
+{
+    padding: 0 4rem;
+}
+
+.tienda_online .tablas td:last-child p{
+    font-weight: bold;
+}
+
+.tienda_online table.tablas img {
+    width: 150px; 
+    height: 200px;
+}
+
+.tienda_online .tablas td input{
+    width: 5rem;
+    text-align: center;
+}
+
+.tienda_online .tablas td p{
+    color: black;
+}
+
+/*---------------------------------------
+                #FOOTER
+---------------------------------------*/
+
+footer{
+    width: 100%;
+    padding: .5em 0;
+    text-align: center;
+    background-color: #262626;
+    color: #fff;
+}
+
+footer a{color:  teal ;}
+@media (min-width: 700px){
+
+
+     label.label-1 input, 
+     label.label-textarea textarea,
+     label.label-select select
+    {
+        width: 600px;
+    }
+    
+}
+@media (max-width: 700px){
+    .preguntas, .ejercicios{
+        width: 90%;
+        margin: auto;
+        padding: 1em 1.5em;
+    }
+    .referencias{
+        width: 90%;
+    }
+    .myButton{
+        display: none;
+    }
+    
+}

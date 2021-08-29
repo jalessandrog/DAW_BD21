@@ -86,7 +86,7 @@ main{
     margin: 1em 0;
     padding: .5em 0;
 }
-.preguntas p, .preguntas article{
+.preguntas p, .preguntas article, .ejercicios p{
     text-align: justify;
     margin: .5em 0;
     padding: .2em 0;
@@ -111,6 +111,28 @@ span{
     font-size: .52em;
     text-align: center;
 }
+table.tablas {
+    margin: 1rem;
+    table-layout:auto;
+    width: 60%;
+    border: 3px solid teal;
+    background-color: rgba(0, 128, 128, 0.469);
+}
+.tablas tbody tr:nth-child(odd) {background-color: rgb(250, 167, 12);}
+.tablas tbody tr:nth-child(even) {background-color: teal;}
+.tablas thead th:nth-child(1) {width: 40%;}
+.tablas thead th:nth-child(2) {width: 10%;}
+.tablas thead th:nth-child(3) {width: 30%;}
+.tablas th {padding: .5rem 2rem;}
+
+.tablas tbody td {
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-size: bold;
+}
+.tablas thead th, tfoot th, .tablas caption{font-family: 'Rock Salt', cursive;}
+
 .mini-divisor{
     background: #f3f3f6;
     border: none;

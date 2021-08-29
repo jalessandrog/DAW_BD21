@@ -159,6 +159,107 @@ function inverso(){
     }
 }
 
+
+
+
 function solucion_problema(){
-    document.getElementById("solucion").innerHTML = resultado;
+    
+    alert("Analiza la consola para saber los productos disponibles");
+    const products = [
+        {
+            producto: "Carne",
+            precio_unidad: 120,
+            unidad_medida: "Kilo(s)"
+        },
+        {
+            producto: "Calabacita",
+            precio_unidad: 5,
+            unidad_medida: "Pieza(s)"
+        },
+        {
+            producto: "Zanahoria",
+            precio_unidad: 6,
+            unidad_medida: "Pieza(s)",
+        },
+        {
+            producto: "Leche",
+            precio_unidad: 20,
+            unidad_medida: "Litro(s)"
+        },
+        {
+            producto: "Jamon",
+            precio_unidad: 18,
+            unidad_medida: "Paquete(s)"
+        },
+        {
+            producto: "Atun",
+            precio_unidad: 12,
+            unidad_medida: "Lata(s)"
+        },
+        {
+            producto: "Platano",
+            precio_unidad: 12,
+            unidad_medida: "Kilo(s)"
+        },
+        {
+            producto: "Tuna",
+            precio_unidad: 20,
+            unidad_medida: "Kilo(s)"
+        },
+        {
+            producto: "Sandia",
+            precio_unidad: 30,
+            unidad_medida: "Pieza(s)"
+        }
+    ];
+
+    products.forEach(element => console.log(element.producto));
+
+    const productos = prompt("Cuántos productos deseas agregar a tu lista de compras: ");
+    let tabla = "";
+    if (productos){
+        if(productos>0){
+            alert("Recuerda escribir el nombre del producto con la primera letra en mayuscula, sin acentos y en singular")
+            tabla = tabla + "<tabla>";
+            tabla = tabla + "<caption>Lista de Compras</caption>";
+            tabla = tabla + "<thead>";
+            tabla = tabla + "<tr>";
+            tabla = tabla + "<th>Producto</th>";
+            tabla = tabla + "<th>Cantidad</th>";
+            tabla = tabla + "<th>Unidad de medida</th>";
+            tabla = tabla + "<th>Precio por unidad</th>";
+            tabla = tabla + "<th>Precio Total </th>";
+            tabla = tabla + "</tr>";
+            tabla = tabla + "</thead>";
+
+            tabla = tabla + "<tbody>";
+
+            for (let i=0; i<productos; i++){
+                let product = prompt("Qué producto deseas agregar: ");
+                console.log(product)
+                const datosProducto = products.find(p => p.producto === product)
+                if(datosProducto){
+                    let cantidad = prompt("Cantidad que deseas agregar: ");
+                    let unidad = datosProducto.unidad_medida;
+                    let precio_unidadProducto = (datosProducto.precio_unidad);
+                    let precio_totalProducto = (datosProducto.precio_unidad)*cantidad;
+
+                    tabla = tabla + "<tr>";
+                    tabla = tabla + "<td>" + product + "</td>";
+                    tabla = tabla + "<td>" + cantidad + "</td>";
+                    tabla = tabla + "<td>" + unidad + "</td>";  
+                    tabla = tabla + "<td>" + precio_unidadProducto + "</td>";  
+                    tabla = tabla + "<td>" +  precio_totalProducto + "</td>";  
+                    tabla = tabla + "</tr>";
+                }else{
+                    alert("Producto no disponible en tienda")
+                }   
+            }
+
+
+            tabla = tabla + "</tbody>";
+            tabla = tabla + "</tabla>";
+            document.getElementById("solucion").innerHTML = tabla;
+        }
+    }
 }

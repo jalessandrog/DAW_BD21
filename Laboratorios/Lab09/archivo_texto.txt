@@ -1,1 +1,1 @@
-Hola, este es un string en un archivo de texto
+Hola, Mundo. Quiero jugar videojuegos

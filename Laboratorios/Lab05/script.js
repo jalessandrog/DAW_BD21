@@ -263,3 +263,54 @@ function solucion_problema(){
         }
     }
 }
+
+
+class Ticket {
+    constructor (folio, cliente, rfc, cfdi, subtotal, IVA){
+        this.folio = folio;
+        this.cliente = cliente;
+        this.rfc = rfc;
+        this.cfdi = cfdi;
+        this.subtotal = subtotal;
+        this.IVA = IVA;
+    }
+
+    get total(){
+        return this.subtotal *(1 + (this.IVA)/100);
+    }
+
+    set nuevoCFDI(motivo){
+        this.cfdi = motivo;
+    }
+}
+
+
+function GenerarTicket(){
+    let ticket_generado = "";
+    let noFolio = prompt("Ingresa el número de folio de tu compra: ");
+
+    if(noFolio){
+        let razonSocial = prompt("Razón Social/Fiscal");
+        let rfc = prompt("Escribe tu RFC");
+        let cfdi = prompt("Escribe el CFDI");
+        let subtotal = prompt("Escribe el total de tu compra sin IVA");
+        let IVA = prompt("Escribe el porcentaje de IVA cobrado");
+
+        let ticket = new Ticket(noFolio, razonSocial, rfc, cfdi, subtotal, IVA);
+        console.log(ticket)
+
+        ticket_generado = ticket_generado + "Ticket <strong>" + ticket.folio + "</strong>";
+        ticket_generado = ticket_generado + "<br>";
+        ticket_generado = ticket_generado + "Razón Social: " + ticket.cliente;
+        ticket_generado = ticket_generado + "<br>";
+        ticket_generado = ticket_generado + "RFC: " + ticket.rfc;
+        ticket_generado = ticket_generado + "<br>";
+        ticket_generado = ticket_generado + "CFDI: " + ticket.cfdi;
+        ticket_generado = ticket_generado + "<br>";
+        ticket_generado = ticket_generado + "Total de la compra: <strong>"+ ticket.total + " pesos </strong> con un cobro del %" + ticket.IVA + " de IVA";
+
+        document.getElementById("generador_ticket").innerHTML = ticket_generado;
+    }else{
+        alert("Es necesario el folio de tu compra para poder proceder a generar el Ticket")
+    }
+}

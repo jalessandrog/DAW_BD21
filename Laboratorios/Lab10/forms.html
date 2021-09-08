@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <nav class="level is-paddingless">
+            <div class="level-item has-text-centered">
+                <p class="heading is-marginless"><strong> Joseph Alessandro García García</strong></p>
+            </div>
+            <div class="level-item has-text-centered">
+                <p class="heading has-text-primary is-marginless"><strong>A01701434</strong></p>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <a href="mailto:a01701434@itesm.mx"><p class="heading has-text-info" ><strong>a01701434@itesm.mx</strong></p></a>
+            </div>
+        </nav>
+        <h1 class="title is-1 has-text-info has-text-centered">Acceso a Redflag</h1>
+        <h5 class="subtitle is-5 has-text-centered">El usuario no se ha dado cuenta que accedió a un sitio falso en donde se capturarán sus datos de acceso</h5>
+        <br>
+        <div class="tabs is-centered is-boxed ">
+            <ul>
+                <li><a href='/'>
+                    <span class="icon is-small"><i class="fas fa-home"></i></span>
+                    <span>Home</span></a></li>
+                <li><a href='/Lab07'>
+                    <span class="icon is-small"><i class="fas fa-code"></i></span>
+                    <span>Laboratorio 7</span>
+                </a></li>
+                <li class="is-active"><a href='/Form'>
+                    <span class="icon is-small"><i class="fas fa-edit"></i></span>
+                    <span>Formulario y el método POST</span>
+                </a></li>
+                <li><a href=''>
+                    <span class="icon is-small"><i class="fas fa-edit"></i></span>
+                    <span>Sin definir</span>
+                </a></li>
+            </ul>
+        </div>
+    </header>
+    <br>
+    <br>
+    <main>
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <form class="box" method="POST">
+                    <div class="field">
+                        <label class="label" for="email">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" id="email" name="email" placeholder="e.g. alex@example.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="contrasenia">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" id="contrasenia" name="contrasenia" placeholder="********">
+                        </div>
+                    </div>
+                    <button class="button is-primary" type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

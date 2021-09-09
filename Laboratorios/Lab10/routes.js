@@ -57,8 +57,13 @@ const reqHandler = (req, res) => {
             res.end();
         });
 
-    } else if (req.url === "") {
-       
+    } else if (req.url === "/aboutme") {
+        fs.readFile('./aboutme.html', function(err, data){
+            if (err) throw err;
+            res.setHeader('Content-Type','html');
+            res.write(data);
+            res.end();
+        })
     } else {
         res.statusCode = 404;
         res.setHeader('Content-Type', 'text/html');

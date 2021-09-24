@@ -1,0 +1,8 @@
+Tipo de Mascota: 
+Fecha de Suceso: 
+Nombre: 
+Edad: 
+Sexo: 
+Historia:
+Mi pequenio amigo cree que es SuperCan y por querer ladrarle al mundo entero, dio un salto del balcon.
+ Se lastimo una patita, pero ahora el balcon tiene malla para evitar que vuelva a querer volar por creerse SuperCan

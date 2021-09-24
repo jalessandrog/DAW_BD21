@@ -1,0 +1,8 @@
+Tipo de Mascota: Perro
+Fecha de Nacimiento: 2012-11-25
+Nombre: Toby Garcia
+Edad: 9
+Sexo: Macho
+Raza: Terrier Escoces
+Tamanio: Pequenio
+Color: Negro

@@ -1,0 +1,8 @@
+Tipo de Mascota: Gato
+Fecha de Nacimiento: 2020-07-05
+Nombre: Momo Rogelio
+Edad: 1
+Sexo: Macho
+Raza: Desconocida
+Tamanio: Mediano
+Color: Gris

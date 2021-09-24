@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab12</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+            <div class="container-fluid">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dogs">Perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cats">Gatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutme">About Me</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="#">
+                    <img src="/images/avatar.jpg" alt="Avatar Logo" style="width:50px;" class="rounded-pill"> 
+                </a>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="px-lg-5">
+            <div class="card">
+                <div class="card-header">
+                    Laboratorio 
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Describe el archivo package.json.</h5>
+                    <p class="card-text">
+                        El archivo Package.JSON es un archivo de definición o manifiesto, en donde se especifican las referencias al proyecto como:
+                        autor, repositorio, version, las dependencias, etc.
+                        <br>
+                        En simples palabras, es el archivo en formato JSON donde se colocará toda la información sobre nuestro proyecto y gracias a este se puede recuperar
+                        información útil de nuestro proyecto.
+                    </p>
+                    <blockquote class="blockquote" style="font-size: small;">
+                        <p class="blockquote-footer">
+                            Manz. (2020). El archivo package.json. <em>Javascript en español. Lenguajejs.com</em> Recuperado de: https://lenguajejs.com/npm/administracion/package-json/
+                        </p>
+                        <p class="blockquote-footer">
+                            Rodríguez, E. (2021). ¿Qué es el package.json y cómo funciona? <em>Anexsoft</em> Recuperado de: https://anexsoft.com/que-es-el-packagejson-y-como-funciona
+                        </p>
+                    </blockquote>
+                </div>
+            </div> 
+            <br>
+            <p class="h1">Mural de Mascotas</p>
+            <div class="row">
+                <!-- Gallery item -->
+                <div class="card bg-secondary text-white" style="width:450px; margin: 1rem;">
+                    <img class="card-img-top" src="/images/pexels_dog4.jpg" alt="Card image" style="width:400px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Perros</h4>
+                        <p class="card-text">Fotografías de perros</p>
+                        <a href="/dogs" class="btn btn-primary">Ver Fotografías</a>
+                    </div>
+                </div>
+                <!-- End -->
+
+                <!-- Gallery item -->
+                <div class="card bg-secondary text-white" style="width:450px;  margin: 1rem;">
+                    <img class="card-img-top" src="/images/pexels_cat1.jpg" alt="Card image" style="width:400px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Gatos</h4>
+                        <p class="card-text">Fotografías de Gatos</p>
+                        <a href="/cats" class="btn btn-primary">Ver Fotografías</a>
+                    </div>
+                </div>
+                <!-- End -->
+            </div>   
+            <div class="card">
+                <div class="card-header">
+                    Anectotas 
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Historias para contar</h5>
+                    <p class="card-text">Cuentame sobre una de tus historias favoritas con alguna de tus mascotas.</p>
+                    <a href="/storyTime" class="btn btn-primary">Contar</a>
+                </div>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

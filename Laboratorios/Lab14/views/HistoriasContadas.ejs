@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="container-fluid">
+        <%- include('partials/Card-Image.ejs') %>
+        <div class="px-lg-5">
+                <div class="row">
+                    
+                    <% if (lista_historias.length > 0) { %>
+                        <% for (let historia of lista_historias) { %>
+                    <!-- Gallery item -->
+                    <div class="card bg-secondary text-white" style="width:500px;  margin: 1rem;">
+                        <div class="card-body">
+                            <h4 class="card-title"><%= historia.Nombre %></h4>
+                            <p class="card-text">Tipo: <%= historia.TipoMascota %></p>
+                            <p class="card-text">Fecha de nacimiento: <%= historia.FechaNacimiento %></p>
+                            <p class="card-text">Edad: <%= historia.Edad %></p>
+                            <p class="card-text">Sexo: <%= historia.Sexo %></p>
+                            <p class="card-text">Historia: <br> <%= historia.Story %></p>
+                        </div>
+                    </div>
+                    <!-- End -->
+                    <% } %>
+                    <% } else { %>
+                        <h3>Aún no hay historias</h3>
+                    <% } %>
+
+                </div>
+            </div>
+        </div>
+    <%- include('partials/Footer.ejs') %>
+</body>
+</html>

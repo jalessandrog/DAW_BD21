@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="container-fluid">
+        <%- include('partials/Card-Image.ejs') %>
+        <div class="px-lg-5">
+                <div class="row">
+                    
+                    <% if (lista_descripciones.length > 0) { %>
+                        <% for (let descripcion of lista_descripciones) { %>
+                    <!-- Gallery item -->
+                    <div class="card bg-secondary text-white" style="width:300px;  margin: 1rem;">
+                        <div class="card-body">
+                            <h4 class="card-title"><%= descripcion.Nombre %></h4>
+                            <p class="card-text">Tipo: <%= descripcion.TipoMascota %></p>
+                            <p class="card-text">Fecha de nacimiento: <%= descripcion.FechaNacimiento %></p>
+                            <p class="card-text">Edad: <%= descripcion.Edad %></p>
+                            <p class="card-text">Raza: <%= descripcion.Raza %></p>
+                            <p class="card-text">Sexo: <%= descripcion.Sexo %></p>
+                            <p class="card-text">Color: <%= descripcion.Color %></p>
+                        </div>
+                    </div>
+                    <!-- End -->
+                    <% } %>
+                    <% } else { %>
+                        <h3>Aún no hay descripciones</h3>
+                    <% } %>
+
+                </div>
+            </div>
+        </div>
+    <%- include('partials/Footer.ejs') %>
+</body>
+</html>

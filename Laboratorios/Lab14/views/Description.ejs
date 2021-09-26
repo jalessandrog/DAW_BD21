@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    
+    <div class="container-fluid">
+        <div class="px-lg-5">
+            <div class="card text-center">
+                <%- include('partials/Card-Image.ejs') %>
+            </div>
+                <br>
+                <form action="" method="POST">
+                    <%- include('partials/FormContent.ejs') %>
+                    <div class="row g-3">
+                        <div class="col-sm-5">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="Raza" id="floatingInputGrid" placeholder="Raza">
+                                <label for="floatingInputGrid">Raza de mascota</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-floating">
+                                <select class="form-select" name="Tamanio" id="floatingSelectGrid" aria-label="Floating label select example">
+                                    <option selected value="">Selecciona el Tamaño</option>
+                                    <option value="Grande">Grande</option>
+                                    <option value="Mediano">Mediano</option>
+                                    <option value="Pequeño">Pequeño</option>
+                                </select>
+                                <label for="floatingSelectGrid">Tamaño de mi mascota</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="Color" id="floatingSelectGrid"  title="Choose your color">
+                                <label for="floatingSelectGrid">Color</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-dark mb-3">Enviar Datos</button>
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+    <%- include('partials/Footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    
+    <div class="container-fluid">
+        <div class="px-lg-5">
+            <p class="h1">Mural de Mascotas</p>
+            <div class="row">
+                <% if (lista_mascotas.length > 0) { %>
+                    <% for (let mascota of lista_mascotas) { %>
+                <!-- Gallery item -->
+                <div class="card bg-secondary text-white" style="width:400px; margin: 1rem;">
+                    <img class="card-img-top" src="/images/<%= mascota.imagen %>.jpg" alt="Card image" style="width:350px; height: 270px;">
+                    <div class="card-body">
+                        <h4 class="card-title"><%= mascota.nombre %></h4>
+                        <p class="card-text">Fotografías de <%= mascota.nombre %></p>
+                        <a href="/dogs" class="btn btn-dark">Ver Fotografías</a>
+                    </div>
+                </div>
+                <!-- End -->
+                <% } %>
+                <% } else { %>
+                    <h3>Aún no se han agregado fotografías al Mural</h3>
+                <% } %>
+            </div>   
+            <div class="card">
+                <div class="card-header">
+                    Anectotas 
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Historias para contar</h5>
+                    <p class="card-text">Cuentame sobre una de tus historias favoritas con alguna de tus mascotas.</p>
+                    <a href="/storyTime" class="btn btn-dark">Contar</a>
+                </div>
+            </div>   
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    Laboratorio 
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">¿Qué otros templating engines existen para node?</h5>
+                    <p class="card-text">
+                        Un motor de plantillas nos ayuda a crear una plantilla HTML con un código mínimo. 
+                        Existen diversos motores de plantillas para Node.js como:
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Pug</li>
+                            <li class="list-group-item ">Haml.js</li>
+                            <li class="list-group-item ">EJS</li>
+                            <li class="list-group-item ">hbs</li>
+                            <li class="list-group-item ">Haml-Coffee</li>
+                            <li class="list-group-item ">Squirrelly</li>
+                            <li class="list-group-item ">React</li>
+                            <li class="list-group-item ">LiquidJs</li>
+                            <li class="list-group-item ">Twing</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <blockquote class="blockquote" style="font-size: small;">
+                        <p class="blockquote-footer">
+                            Express. (2017). Template engines. <em>ExpressJs</em> Recuperado de: https://expressjs.com/en/resources/template-engines.html
+                        </p>
+                        <p class="blockquote-footer">
+                            TutorialsTeacher (2020).Template Engines for Node.js <em>TutorialsTeacher</em> Recuperado de: https://www.tutorialsteacher.com/nodejs/template-engines-for-nodejs
+                        </p>
+                    </blockquote>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+    <%- include('partials/Footer.ejs') %>
+</body>
+</html>

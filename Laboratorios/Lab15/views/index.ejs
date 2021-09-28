@@ -16,7 +16,11 @@
                     <div class="card-body">
                         <h4 class="card-title"><%= mascota.nombre %></h4>
                         <p class="card-text">Fotografías de <%= mascota.nombre %></p>
+                        <% if (mascota.nombre === 'Perros') {  %>
                         <a href="/dogs" class="btn btn-dark">Ver Fotografías</a>
+                        <% }else{ %>
+                        <a href="/cats" class="btn btn-dark">Ver Fotografías</a>
+                        <% } %>
                     </div>
                 </div>
                 <!-- End -->
@@ -41,21 +45,24 @@
                     Laboratorio 
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">¿Qué otros templating engines existen para node?</h5>
+                    <h5 class="card-title">¿Qué beneficios encuentras en el estilo MVC?</h5>
                     <p class="card-text">
-                        Un motor de plantillas nos ayuda a crear una plantilla HTML con un código mínimo. 
-                        Existen diversos motores de plantillas para Node.js como:
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Pug</li>
-                            <li class="list-group-item ">Haml.js</li>
-                            <li class="list-group-item ">EJS</li>
-                            <li class="list-group-item ">hbs</li>
-                            <li class="list-group-item ">Haml-Coffee</li>
-                            <li class="list-group-item ">Squirrelly</li>
-                            <li class="list-group-item ">React</li>
-                            <li class="list-group-item ">LiquidJs</li>
-                            <li class="list-group-item ">Twing</li>
-                        </ul>
+                        
+                    </p>
+                    <br>
+                    <blockquote class="blockquote" style="font-size: small;">
+                        <p class="blockquote-footer">
+                            Express. (2017). Template engines. <em>ExpressJs</em> Recuperado de: https://expressjs.com/en/resources/template-engines.html
+                        </p>
+                        <p class="blockquote-footer">
+                            TutorialsTeacher (2020).Template Engines for Node.js <em>TutorialsTeacher</em> Recuperado de: https://www.tutorialsteacher.com/nodejs/template-engines-for-nodejs
+                        </p>
+                    </blockquote>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">¿Qué beneficios encuentras en el estilo MVC?</h5>
+                    <p class="card-text">
+                        
                     </p>
                     <br>
                     <blockquote class="blockquote" style="font-size: small;">

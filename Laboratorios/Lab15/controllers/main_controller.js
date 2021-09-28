@@ -1,15 +1,10 @@
-const Mascota = require('../models/dogs_model');
-const Historias = require('../models/main_model');
+const Mascota = require('../models/petsGallery_model');
+const Historias = require('../models/historias_model');
 
-const mascotas = [
-    {nombre: "Perros", imagen: "pexels_dog2"},
-    {nombre: "Gatos", imagen: "pexels_cat2"},
-];
 
 const controller = {
     index:  (req, res, next) => {
-        res.render('index',
-        {lista_mascotas: mascotas})
+        res.render('index',{ lista_mascotas: Mascota.fetchAll() })
     },
 
     story: (req, res, next) => {
@@ -17,10 +12,7 @@ const controller = {
     },
 
     memories: (req, res, next) => {
-        res.render('HistoriasContadas',{
-            lista_historias: Historias,
-            Subtitulo: 'Mural de Historias Contadas'
-        })
+        res.render('HistoriasContadas',{ lista_historias: Historias.fetchAll(), Subtitulo: 'Mural de Historias Contadas' })
     },
 
     saveStory: (req, res, next) => {

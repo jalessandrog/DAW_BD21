@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <%- include('includes/head.ejs') %>
+<body>
+    <%- include('includes/header.ejs') %>
+    
+    <div class="container-fluid">
+        <div class="px-lg-5">
+            <div class="card text-center">
+                <%- include('includes/Card-Image.ejs') %>
+            </div>
+                <br>
+                <form action="" method="POST">
+                    <%- include('includes/FormContent.ejs') %>
+                    <div class="row">
+                        <div class="col-g">
+                            <div class="form-floating">
+                                <textarea class="form-control" name="Story" aria-label="With textarea" id="floatingInputGrid" placeholder="Contar suceso"></textarea>
+                                <label for="floatingInputGrid">Contar suceso</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-dark mb-3">Contar Historia</button>
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+    <%- include('includes/Footer.ejs') %>
+</body>
+</html>

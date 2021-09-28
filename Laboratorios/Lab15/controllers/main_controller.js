@@ -4,7 +4,7 @@ const Historias = require('../models/historias_model');
 
 const controller = {
     index:  (req, res, next) => {
-        res.render('index',{ lista_mascotas: Mascota.fetchAll() })
+        res.render('index',{ Titulo:"Laboratorio 15", lista_mascotas: Mascota.fetchAll() })
     },
 
     story: (req, res, next) => {

@@ -26,6 +26,7 @@
 
                 </div>
             </div>
+            <% if( isLoggedIn ) { %>
             <div class="card mx-auto" style="width: 25rem;">
                 <div class="card-header">
                     Mi <%= mascota %> 
@@ -36,6 +37,7 @@
                     <a href="/cats/add" class="btn btn-dark">Describir</a>
                 </div>
             </div> 
+            <% } %>
         </div>
         <%- include('includes/Footer.ejs') %>
 </body>

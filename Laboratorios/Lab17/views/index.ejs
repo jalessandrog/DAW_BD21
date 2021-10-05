@@ -28,7 +28,8 @@
                 <% } else { %>
                     <h3>Aún no se han agregado fotografías al Mural</h3>
                 <% } %>
-            </div>   
+            </div>
+            <% if( isLoggedIn ) { %>
             <div class="card">
                 <div class="card-header">
                     Anectotas 
@@ -40,6 +41,7 @@
                 </div>
             </div>   
             <br>
+            <% } %>
             <div class="card">
                 <div class="card-header">
                     <%= Titulo %> 

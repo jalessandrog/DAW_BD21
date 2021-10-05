@@ -4,15 +4,24 @@ const catDescription = require('../models/catsDescription_model');
 
 const controller = {
     catsList: (req, res, next) => {
-        res.render('allCats',{ lista_cats: Cat.fetchAll(),mascota: 'Michi' })
+        res.render('allCats',{ lista_cats: Cat.fetchAll(),mascota: 'Michi' ,
+        isLoggedIn: req.session.isLoggedIn,
+        email: req.session.email, 
+        })
     },
 
     addcat: (req, res, next) => {
-        res.render('Description', { Subtitulo: 'Describiendo a mi mascota' })
+        res.render('Description', { Subtitulo: 'Describiendo a mi mascota',
+        isLoggedIn: req.session.isLoggedIn,
+        email: req.session.email, 
+        })
     },
 
     seeDescriptions:(req, res, next) => {
-        res.render('CatsDescriptions',{ lista_descripciones: catDescription.fetchAll(), Subtitulo: 'Mural de Descripciones de Michis' })
+        res.render('CatsDescriptions',{ lista_descripciones: catDescription.fetchAll(), Subtitulo: 'Mural de Descripciones de Michis',
+        isLoggedIn: req.session.isLoggedIn,
+        email: req.session.email, 
+        })
     },
 
     saveCat:(req, res, next) => {

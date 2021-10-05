@@ -4,7 +4,7 @@ const Historias = require('../models/historias_model');
 
 const controller = {
     index:  (req, res, next) => {
-        res.render('index',{ Titulo:"Laboratorio 15", lista_mascotas: Mascota.fetchAll(),
+        res.render('index',{ Titulo:"Laboratorio 17", lista_mascotas: Mascota.fetchAll(),
         isLoggedIn: req.session.isLoggedIn,
         email: req.session.email, 
         })
@@ -52,6 +52,9 @@ const controller = {
         console.log("Username: "+req.body.email.split('@')[0])
         req.session.isLoggedIn = true;
         console.log(req.session.email);
+        if(req.body.rememberMe){
+            res.setHeader('Set-Cookie', 'ultimoAcceso='+req.body.email+'; HttpOnly');
+        }
         res.status(302).redirect('/');
     },
 

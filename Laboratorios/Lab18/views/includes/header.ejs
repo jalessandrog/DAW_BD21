@@ -1,0 +1,24 @@
+<header>
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <div class="container-fluid">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="/users/aboutme">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add">Agregar Nuevo</a></li>
+            </ul>
+            <% if( isLoggedIn ) { %>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Welcome <%= email.split('@')[0] %></a>
+            <span></span>
+            <span></span>
+            <% } %>
+            <% if( !isLoggedIn ) { %>
+            <a class="btn btn-sm btn-outline-secondary" type="button" href="/users/login">Iniciar Sesión</a>
+            <% } else { %>
+            <a class="btn btn-sm btn-outline-secondary" type="button" href="/users/logout">Cerrar Sesión</a>
+            <img src="/images/avatar.jpg" alt="Avatar Logo" style="width:50px;" class="rounded-pill"> 
+            <% } %>
+        </div>
+    </nav>
+</header>
+<br>
+<br>

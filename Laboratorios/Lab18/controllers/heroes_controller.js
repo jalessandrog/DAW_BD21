@@ -28,7 +28,7 @@ const controller = {
         console.log(req.body);
         console.log(req.body.nombre);
         res.setHeader('Set-Cookie', 'ultimo_heroe='+req.body.nombre+'; HttpOnly');
-        const heroe = new Heroe(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, "https://i.blogs.es/87930e/comidas-ricas/650_1200.jpg");
+        const heroe = new Heroe(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, "avatar.jpg");
         heroe.save()
             .then( () => {
                 res.status(302).redirect('/');

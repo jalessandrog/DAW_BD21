@@ -41,14 +41,10 @@ module.exports = class Heroe {
         } else {
             return db.execute('SELECT * FROM heroes');
         }
-        
     }
 
-    // save() {
-    //     heroes.push(this);
-    // }
-
-    // static fetchAll() {
-    //     return heroes;
+    // update() {
+    //     return db.execute(' UPDATE heroes set (nombre, profesion, pais, resenia, imagen) VALUES (?, ?, ?, ?, ?)',
+    //         [this.nombre, this.profesion, this.pais, this.resenia, this.imagen]);
     // }
 }

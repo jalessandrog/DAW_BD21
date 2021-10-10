@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <%- include('includes/head.ejs') %>
+<body>
+    <%- include('includes/header.ejs') %>
+    
+    <div class="container-fluid">
+        <div class="px-lg-5">
+            <p class="h1 text-center">UN MUNDO DE SUPER HEROES</p>
+            <p class="text-center">
+                Ni Superman, Iron Man o La Mujer Maravilla son tan importantes cómo las 
+                y los Heroes de carne y hueso que encontrarás en este sitio. Espero que 
+                ellas y ellos te sirvan como inspiración para poder cumplir tus objetivos. 
+            </p>
+            <% if( isLoggedIn ) { %>
+            <a class="btn btn-dark" href="/add" type="button">Agregar Nuevo</a>
+            <% } %>
+            <div class="row">
+                <% if (lista_heroes.length > 0) { %>
+                    <% for (let heroe of lista_heroes) { %>
+                <!-- Gallery item -->
+                <div class="card bg-secondary text-white" style="width:400px; margin: 1rem;">
+                    <img class="card-img-top" src="/images/<%= heroe.imagen %>" alt="Card image" style="width:350px; height: 270px;">
+                    <div class="card-body">
+                        <h4 class="card-title"><%= heroe.nombre %></h4>
+                        <a id="heroe" href="/<%= heroe.id %>" class="btn btn-dark">Ver información</a>
+                    </div>
+                </div>
+                <!-- End -->
+                    <% } %>
+                <% } else { %>
+                    <h3>Aún no se han agregado heroes al Mural</h3>
+                <% } %>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">¿Qué otras formas de autentificación existen?</h5>
+                    <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Autentificación básica</li>
+                            <li class="list-group-item">Autentificación basada en token</li>
+                            <li class="list-group-item">Autentificación basada en clave API</li>
+                            <li class="list-group-item">OAuth 2.0 (Autorización abierta)</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <blockquote class="blockquote" style="font-size: small;">
+                        <p class="blockquote-footer">
+                            Vergara, S. (2019). ¿Cuál es el mejor método de autentificación en un API REST? <em>ITDO</em> Recuperado de: 
+                            <a href="https://www.itdo.com/blog/cual-es-el-mejor-metodo-de-autentificacion-en-un-api-rest/">https://www.itdo.com/blog/cual-es-el-mejor-metodo-de-autentificacion-en-un-api-rest/</a>
+                        </p>
+                    </blockquote>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+    <%- include('includes/Footer.ejs') %>
+</body>
+</html>

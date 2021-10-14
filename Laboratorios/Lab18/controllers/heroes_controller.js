@@ -2,10 +2,10 @@ const Heroe = require('../models/heroe');
 const db = require('../util/database');
 
 const controller = {
-    index:  (req, res, next) => {
+    index:(req, res, next) => {
         Heroe.fetchAll()
         .then(([rows, fieldData]) => {
-            console.log(rows);
+            // console.log(rows);
             res.render('index', {
                 isLoggedIn: req.session.isLoggedIn,
                 email: req.session.email, 
@@ -21,7 +21,7 @@ const controller = {
     seeHeroe:(req, res, next) => {
         Heroe.fetchOne(req.params.heroe_id)
         .then(([rows, fieldData]) => {
-            console.log(rows);
+            // console.log(rows);
             res.render('Heroe', {
                 isLoggedIn: req.session.isLoggedIn,
                 email: req.session.email, 
@@ -42,8 +42,8 @@ const controller = {
     },
 
     saveHeroe:(req, res, next) => {
-        console.log(req.body);
-        console.log(req.body.nombre);
+        // console.log(req.body);
+        // console.log(req.body.nombre);
         res.setHeader('Set-Cookie', 'ultimo_heroe='+req.body.nombre+'; HttpOnly');
         const heroe = new Heroe(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, "avatar.jpg");
         heroe.save()
@@ -59,7 +59,7 @@ const controller = {
     updateHeroe:(req, res, next) => {
         Heroe.fetchOne(req.params.heroe_id)
         .then(([rows, fieldData]) => {
-            console.log(rows);
+            // console.log(rows);
             res.render('updateHeroe', {
                 isLoggedIn: req.session.isLoggedIn,
                 email: req.session.email, 
@@ -72,14 +72,23 @@ const controller = {
     },
 
     processUpdate: (req, res, next) => {
-        console.log('actualizando heroe')
-        Heroe.update(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, req.params.id )
+        console.log('actualizando heroe...')
+        console.log('ID: '+req.params.heroe_id+' Correspondiente a: '+req.body.nombre)
+        Heroe.update(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, req.params.heroe_id)
             .then( () => {
+                console.log('Actualización de heroe con exito!!')
                 res.status(302).redirect('/');
             })
             .catch(err => {
                 res.status(302).redirect('/error');
             });
     },
+
+    error:(req, res, next) => {
+        res.render('error',{ 
+        isLoggedIn: req.session.isLoggedIn,
+        email: req.session.email, 
+        })
+    }
 }
 module.exports = controller;

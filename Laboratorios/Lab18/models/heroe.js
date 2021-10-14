@@ -43,10 +43,13 @@ module.exports = class Heroe {
             [this.nombre, this.profesion, this.pais, this.resenia, this.imagen]);
     }
 
-    static update( nombre, profesion, pais, resenia, id){
-        return db.execute('UPDATE heroes SET  nombre = ?, profesion = ?, pais = ?, resenia = ? WHERE id = ? ',
-            [nombre, profesion, pais, resenia,id]);
+    static update(id, nombre, profesion, pais, resenia){
+        return db.execute('UPDATE heroes SET nombre = ?, profesion = ?, pais = ?, resenia = ? WHERE id = ? ',
+            [id, nombre, profesion, pais, resenia]);
+        // return db.execute('UPDATE heroes SET  nombre = ?, profesion = ?, pais = ?, resenia = ? WHERE id = ? ',
+        //     [nombre, profesion, pais, resenia,id]);
     }
+
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {

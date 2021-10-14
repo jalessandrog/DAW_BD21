@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <%- include('includes/head.ejs') %>
+<body>
+    <%- include('includes/header.ejs') %>
+    
+    <div class="container-fluid">
+        <div class="card text-center">
+            <div class="card-header">
+                <%= heroe.pais %>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title"><%= heroe.nombre %></h3>
+                <p class="card-text text-muted"><em><%= heroe.profesion %></em></p>
+                <p class="card-text lead"><%= heroe.resenia %></p>
+                <img class="card-img-top" src="/images/<%= heroe.imagen %>" alt="Card image" style="width:350px; height:270px;">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="d-grid gap-2 col-3 mx-auto">
+        <a id="heroe" href="/editar/<%= heroe.id %>" class="btn btn-dark">Actualizar información</a>
+    </div>
+    <br>
+    <%- include('includes/Footer.ejs') %>
+</body>
+</html>

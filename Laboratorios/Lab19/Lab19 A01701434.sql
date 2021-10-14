@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-10-2021 a las 18:17:45
+-- Tiempo de generación: 14-10-2021 a las 17:07:45
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -20,6 +20,14 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `basedatos_ad2021`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `registrarMaterial` (IN `Clave` INT, IN `Descripcion` VARCHAR(40) CHARSET utf8, IN `Costo` FLOAT, IN `PorcentajeImpuesto` FLOAT)  INSERT INTO materiales VALUES (Clave, descripcion, costo, PorcentajeImpuesto)$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 

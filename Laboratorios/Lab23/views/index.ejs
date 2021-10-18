@@ -4,7 +4,9 @@
 <body>
     <%- include('includes/header.ejs') %>
     
+    
     <div class="container-fluid">
+        
         <div class="px-lg-5">
             <p class="h1 text-center">UN MUNDO DE SUPER HEROES</p>
             <p class="text-center">
@@ -12,10 +14,22 @@
                 y los Heroes de carne y hueso que encontrarás en este sitio. Espero que 
                 ellas y ellos te sirvan como inspiración para poder cumplir tus objetivos. 
             </p>
+            <br>
+            <input type="hidden" name="_csrf" id="_csrf" value="<%= csrfToken %>" >
+            <div class="input-group" >
+                <div class="form-floating col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" name="search" class="form-control rounded-pill" id="buscar" aria-label="Search"
+                    aria-describedby="search-addon" placeholder="buscar" aria-placeholder="Buscar">
+                    <label for="floatingInputGrid">Buscar</label>
+                </div>
+                <!-- <button class="btn btn-primary rounded-pill"><i class="fa fa-search">Search</i></button> -->
+            </div>
+            <br>
+            
             <% if( isLoggedIn ) { %>
             <a class="btn btn-dark" href="/add" type="button">Agregar Nuevo</a>
             <% } %>
-            <div class="row">
+            <div class="row" id="card_heroe">
                 <% if (lista_heroes.length > 0) { %>
                     <% for (let heroe of lista_heroes) { %>
                 <!-- Gallery item -->
@@ -38,31 +52,34 @@
                     
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</h5>
+                    <h5 class="card-title">¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications?</h5>
                     <p class="card-text">
-                        Permite que nuestro código este limpio y ordenado. Además, debido a que no todas las bases de datos están estandarizadas o construidas
-                        de la misma forma, por lo cual pueden existir variaciones, etc. Por lo cual, tener una capa especificamente para el código SQL nos ofrece la capacidad de poder corregir, actualizar o generar la 
-                        sintaxis correcta para su variante dinamicamente. 
-                        <br>
-                        También es importante señalar que brinda una mejora en el rendimiento. 
+                    
                     </p>
                     <br>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">¿Qué es SQL injection y cómo se puede prevenir?</h5>
+                    <h5 class="card-title">
+                        ¿Qué implicaciones de seguridad tiene AJAX? 
+                        ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?
+                    </h5>
                     <p class="card-text">
-                        SQL Injection es una vulnerabilidad de seguridad web que permite al atacante interferir con las queries que 
-                        una aplicación hace con su base de datos. En este caso, el atacante podría visualizar los datos que no deberían ser visibles para el usuario después de injectar código
-                        a alguna de nuestras query. 
-                        <br>
-                        Formas de prevenir SQL injection:
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Convertir siempre el valor a su tipo correspondiente</li>
-                            <li class="list-group-item">Parametrizar las consultas SQL</li>
-                            <li class="list-group-item">Usar una cuenta con permisos restringidos a la base de datos</li>
-                            <li class="list-group-item">No mostrar al usuario la información de error generada por la base de datos</li>
-                            <li class="list-group-item">Rechazar las peticiones con caractéres sospechosos</li>
-                        </ul>
+                    
+                    </p>
+                    <br>
+                    <blockquote class="blockquote" style="font-size: small;">
+                        <p class="blockquote-footer">
+                            Tips para evitar SQL Injection – Return(GiS); (2010, October 29). Retrieved October 14, 2021, from Geeks.ms website: https://geeks.ms/gtorres/2010/10/29/tips-para-evitar-sql-injection/
+                        </p>
+                        <p class="blockquote-footer">
+                            What is SQL Injection? Tutorial & Examples | Web Security Academy. (2021). Retrieved October 14, 2021, from Portswigger.net website: https://portswigger.net/web-security/sql-injection
+                        </p>
+                    </blockquote>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">¿Qué es JSON?</h5>
+                    <p class="card-text">
+                    
                     </p>
                     <br>
                     <blockquote class="blockquote" style="font-size: small;">
@@ -79,5 +96,6 @@
         </div>
     </div>
     <%- include('includes/Footer.ejs') %>
+    <%- include('includes/scriptSearch.ejs') %>
 </body>
 </html>

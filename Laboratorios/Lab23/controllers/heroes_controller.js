@@ -16,6 +16,17 @@ const controller = {
         });
     },
 
+    search:(req, res, next) => {
+        // console.log(req.body.query)
+        Heroe.buscar(req.body.query)
+            .then(([rows, fieldData]) => {
+                res.status(200).json({rows});
+            }).catch(err => {
+                console.log(err);
+                res.status(302).json({error: err});
+            });
+    },
+
     seeHeroe:(req, res, next) => {
         Heroe.fetchOne(req.params.heroe_id)
         .then(([rows, fieldData]) => {
@@ -40,8 +51,6 @@ const controller = {
     },
 
     saveHeroe:(req, res, next) => {
-        // console.log(req.body);
-        // console.log(req.body.nombre);
         res.setHeader('Set-Cookie', 'ultimo_heroe='+req.body.nombre+'; HttpOnly');
         const heroe = new Heroe(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, "avatar.jpg");
         heroe.save()

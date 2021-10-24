@@ -21,6 +21,10 @@
     <br>
     <div class="d-grid gap-2 col-3 mx-auto">
         <a id="heroe" href="/editar/<%= heroe.id %>" class="btn btn-dark">Actualizar información</a>
+        <form action="/delete/<%= heroe.id %>" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+            <button type="" id="heroe" href="/delete/<%= heroe.id %>" class="btn btn-dark">Eliminar</button>
+        </form>
     </div>
     <br>
     <%- include('includes/Footer.ejs') %>

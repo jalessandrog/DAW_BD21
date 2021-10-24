@@ -51,8 +51,10 @@ const controller = {
     },
 
     saveHeroe:(req, res, next) => {
+        let id = Math.floor(Math.random() * ((100+1)-1)+1);
+        console.log(id)
         res.setHeader('Set-Cookie', 'ultimo_heroe='+req.body.nombre+'; HttpOnly');
-        const heroe = new Heroe(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, "avatar.jpg");
+        const heroe = new Heroe(id, req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, "avatar.jpg");
         heroe.save()
             .then( () => {
                 res.status(302).redirect('/');
@@ -81,7 +83,8 @@ const controller = {
     processUpdate: (req, res, next) => {
         console.log('actualizando heroe...')
         console.log('ID: '+req.params.heroe_id+' Correspondiente a: '+req.body.nombre)
-        Heroe.update(req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, req.params.heroe_id)
+        console.log(req.body)
+        Heroe.update(req.params.heroe_id, req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia)
             .then( () => {
                 console.log('Actualización de heroe con exito!!')
                 res.status(302).redirect('/');
@@ -89,6 +92,17 @@ const controller = {
             .catch(err => {
                 res.status(302).redirect('/error');
             });
+    },
+
+    delete:(req, res, next) => {
+        Heroe.deleteHeroe(req.params.heroe_id)
+        .then(([rows, fieldData]) => {
+            console.log('Eliminacion de heroe con exito!!')
+            res.status(302).redirect('/');
+        })
+        .catch(err => {
+            res.status(302).redirect('/error');
+        });
     },
 
     error:(req, res, next) => {

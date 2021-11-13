@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <%- include('includes/head.ejs') %>
+<body>
+    <%- include('includes/header.ejs') %>
+    
+    <div class="container-fluid">
+      <div class="px-lg-5">
+        <h1 class="text-center">Editar información sobre 
+            <span><em class="fw-bold"><%= heroe.nombre%></em></span>
+        </h1>
+        <br>
+        <form action="/editar/<%= heroe.id%>" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+            <div class="row g-3">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-floating">
+                        <input type="text" name="nombre" class="form-control" id="floatingInputGrid" placeholder="Nombre" value="<%= heroe.nombre%>">
+                        <label for="floatingInputGrid">Nombre</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-floating">
+                        <input type="text" name="profesion" class="form-control" id="floatingInputGrid" placeholder="profesion" value="<%= heroe.profesion%>">
+                        <label for="floatingInputGrid">Profesión</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-floating">
+                        <input type="text" name="pais" class="form-control" id="floatingInputGrid" placeholder="pais" value="<%= heroe.pais%>">
+                        <label for="floatingInputGrid">Pais</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-floating">
+                        <textarea class="form-control" name="resenia" aria-label="With textarea" id="floatingInputGrid" placeholder="resenia"  style="height:9rem"><%= heroe.resenia%></textarea>
+                        <label for="floatingInputGrid">Resenia</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-dark mb-3">Actualizar Datos</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

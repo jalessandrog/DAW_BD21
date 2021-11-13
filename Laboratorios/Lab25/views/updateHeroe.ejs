@@ -10,7 +10,7 @@
             <span><em class="fw-bold"><%= heroe.nombre%></em></span>
         </h1>
         <br>
-        <form action="/editar/<%= heroe.id%>" method="post">
+        <form action="/editar/<%= heroe.id%>" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
             <div class="row g-3">
                 <div class="col-sm-12 col-md-12 col-lg-12">
@@ -35,6 +35,12 @@
                     <div class="form-floating">
                         <textarea class="form-control" name="resenia" aria-label="With textarea" id="floatingInputGrid" placeholder="resenia"  style="height:9rem"><%= heroe.resenia%></textarea>
                         <label for="floatingInputGrid">Resenia</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div>
+                        <label for="formFile" class="form-label">Agrega nueva imagen</label>
+                        <input class="form-control" type="file" name="imagen" id="imagen">
                     </div>
                 </div>
             </div>

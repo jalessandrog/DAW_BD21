@@ -54,15 +54,21 @@ const controller = {
         let id = Math.floor(Math.random() * ((100+1)-1)+1);
         console.log(id)
         res.setHeader('Set-Cookie', 'ultimo_heroe='+req.body.nombre+'; HttpOnly');
-        const heroe = new Heroe(id, req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, req.file.filename);
-        heroe.save()
-            .then( () => {
-                res.status(302).redirect('/');
-            })
-            .catch(err => {
-                console.log(err);
-                res.status(302).redirect('/error');
-            });
+        if(req.file){
+            if(req.file.filename){
+                const heroe = new Heroe(id, req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, req.file.filename);
+                heroe.save()
+                    .then( () => {
+                        res.status(302).redirect('/');
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        res.status(302).redirect('/error');
+                    });
+            }
+        }else{
+            res.send('Falta adjuntar imagen, intentalo de nuevo')
+        }
     },
 
     updateHeroe:(req, res, next) => {
@@ -84,14 +90,27 @@ const controller = {
         console.log('actualizando heroe...')
         console.log('ID: '+req.params.heroe_id+' Correspondiente a: '+req.body.nombre)
         console.log(req.body)
-        Heroe.update(req.params.heroe_id, req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia)
-            .then( () => {
-                console.log('Actualización de heroe con exito!!')
-                res.status(302).redirect('/');
-            })
-            .catch(err => {
-                res.status(302).redirect('/error');
-            });
+        if(req.file){
+            if(req.file.filename){
+                Heroe.update(req.params.heroe_id, req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia, req.file.filename)
+                    .then( () => {
+                        console.log('Actualización de heroe con exito!!')
+                        res.status(302).redirect('/');
+                    })
+                    .catch(err => {
+                        res.status(302).redirect('/error');
+                    });
+            }
+        }else{
+            Heroe.updateNoImagen(req.params.heroe_id, req.body.nombre, req.body.profesion, req.body.pais, req.body.resenia)
+                    .then( () => {
+                        console.log('Actualización de heroe con exito!!')
+                        res.status(302).redirect('/');
+                    })
+                    .catch(err => {
+                        res.status(302).redirect('/error');
+                    });
+        }
     },
 
     delete:(req, res, next) => {

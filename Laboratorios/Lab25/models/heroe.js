@@ -20,10 +20,15 @@ module.exports = class Heroe {
         return db.execute ('CALL insertHeroe (?, ?, ?, ?, ?, ?)',[this.id, this.nombre, this.profesion, this.pais, this.resenia, this.imagen]);
     }
 
-    static update(id, nombre, profesion, pais, resenia){
+    static update(id, nombre, profesion, pais, resenia, imagen){
         // return db.execute('UPDATE heroes SET nombre = ?, profesion = ?, pais = ?, resenia = ? WHERE id = ? ',
         //     [id, nombre, profesion, pais, resenia]);
-        return db.execute ('CALL updateHeroe (?, ?, ?, ?, ?)',[id, nombre, profesion, pais, resenia]);
+        return db.execute ('CALL updateHeroe (?, ?, ?, ?, ?, ?)',[id, nombre, profesion, pais, resenia, imagen]);
+    }
+    static updateNoImagen(id, nombre, profesion, pais, resenia){
+        // return db.execute('UPDATE heroes SET nombre = ?, profesion = ?, pais = ?, resenia = ? WHERE id = ? ',
+        //     [id, nombre, profesion, pais, resenia]);
+        return db.execute ('CALL updateHeroeNoImagen (?, ?, ?, ?, ?)',[id, nombre, profesion, pais, resenia]);
     }
 
 

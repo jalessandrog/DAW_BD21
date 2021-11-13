@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-10-2021 a las 09:51:12
+-- Tiempo de generación: 13-11-2021 a las 20:41:28
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -29,7 +29,13 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteHeroe` (IN `h_id` TINYINT(4))
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertHeroe` (IN `id` TINYINT(4), IN `nombre` VARCHAR(100) CHARSET utf8mb4, IN `profesion` VARCHAR(100) CHARSET utf8mb4, IN `pais` VARCHAR(30) CHARSET utf8mb4, IN `resenia` LONGTEXT CHARSET utf8mb4, IN `imagen` VARCHAR(800) CHARSET utf8mb4)  INSERT INTO heroes VALUES (id, nombre, profesion, pais, resenia, imagen)$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `updateHeroe` (IN `h_id` TINYINT(4), IN `h_nombre` VARCHAR(100) CHARSET utf8mb4, IN `h_profesion` VARCHAR(100) CHARSET utf8mb4, IN `h_pais` VARCHAR(30) CHARSET utf8mb4, IN `h_resenia` LONGTEXT CHARSET utf8mb4)  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `updateHeroe` (IN `h_id` TINYINT(4), IN `h_nombre` VARCHAR(100) CHARSET utf8mb4, IN `h_profesion` VARCHAR(100) CHARSET utf8mb4, IN `h_pais` VARCHAR(30) CHARSET utf8mb4, IN `h_resenia` LONGTEXT CHARSET utf8mb4, IN `h_imagen` VARCHAR(800) CHARSET utf8mb4)  BEGIN
+
+UPDATE heroes SET  heroes.nombre = h_nombre, heroes.profesion = h_profesion, heroes.pais = h_pais, heroes.resenia = h_resenia, heroes.imagen = h_imagen WHERE heroes.id = h_id;
+
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `updateHeroeNoImagen` (IN `h_id` TINYINT(4), IN `h_nombre` VARCHAR(100) CHARSET utf8mb4, IN `h_profesion` VARCHAR(100) CHARSET utf8mb4, IN `h_pais` VARCHAR(30) CHARSET utf8mb4, IN `h_resenia` LONGTEXT CHARSET utf8mb4)  BEGIN
 
 UPDATE heroes SET  heroes.nombre = h_nombre, heroes.profesion = h_profesion, heroes.pais = h_pais, heroes.resenia = h_resenia WHERE heroes.id = h_id;
 
@@ -65,7 +71,8 @@ INSERT INTO `heroes` (`id`, `nombre`, `profesion`, `pais`, `resenia`, `imagen`) 
 (7, 'Vinton (Vin) Cerf', 'Matemático y Científico de la Computación', 'Estados Unidos', 'Vinton Gray Cerf (New Haven, Connecticut, Estados Unidos, 23 de junio de 1943) es un científico de la computación estadounidense, considerado uno de los padres de Internet. Se graduó en matemáticas y ciencias de la computación en la Universidad de Stanford (1965). Durante su estancia posterior en la Universidad de California (UCLA) obtuvo la maestría en ciencias y el doctorado.', 'vinton_cerf.jpg'),
 (8, 'Joan Clarke', 'Criptoanalista y Numismática', 'Reino Unido', 'Joan Elisabeth Lowther Murray (Londres, 24 de junio de 1917 – Oxford, 4 de septiembre de 1996) fue una criptoanalista y numismática británica que trabajó en Bletchley Park durante la Segunda Guerra Mundial. Fue la única mujer que trabajó en el equipo del matemático Alan Turing en el proyecto Enigma, que desencriptó las comunicaciones secretas de la Alemania nazi. Su papel en este proceso le valió premios y citaciones, como el nombramiento como miembro de la Orden del Imperio Británico (MBE), en 1946.1', 'Joan-Clarke.jpg'),
 (9, 'Alan Turing', 'Matemático y Científico de la Computación', 'Reino Unido', 'Alan Mathison Turing (Paddington, Londres, 23 de junio de 1912-Wilmslow, Cheshire, 7 de junio de 1954), fue un matemático, lógico, científico de la computación, criptógrafo, filósofo, biólogo teórico, maratoniano y corredor de ultradistancia británico. Es considerado uno de los padres de la ciencia de la computación y precursor de la informática moderna. Proporcionó una influyente formalización de los conceptos de algoritmo y computación: la máquina de Turing. Formuló su propia versión que hoy es ampliamente aceptada como la tesis de Church-Turing (1936).', 'Alan_Turing.jpg'),
-(11, 'Nikola Tesla', 'Físico', 'Estados Unidos', 'Físico estadounidense de origen serbio. Estudió en las universidades de Graz (Austria) y Praga. Después de haber trabajado en varias industrias eléctricas en París y en Budapest, se trasladó a Estados Unidos (1884), donde trabajó a las órdenes de Thomas A. Edison, entonces partidario de la corriente eléctrica continua..', 'Nikola_Tesla.jpg');
+(11, 'Nikola Tesla', 'Físico', 'Estados Unidos', 'Físico estadounidense de origen serbio. Estudió en las universidades de Graz (Austria) y Praga. Después de haber trabajado en varias industrias eléctricas en París y en Budapest, se trasladó a Estados Unidos (1884), donde trabajó a las órdenes de Thomas A. Edison, entonces partidario de la corriente eléctrica continua..', 'Nikola_Tesla.jpg'),
+(35, 'Subir archivos con multer', 'Multer', 'Mx', 'Prueba subida de archivos con multer\r\n\r\n\r\nPrueba de update con multer', '147-camera.jpg');
 
 -- --------------------------------------------------------
 
@@ -117,7 +124,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `heroes`
 --
 ALTER TABLE `heroes`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

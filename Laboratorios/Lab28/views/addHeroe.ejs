@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <%- include('includes/head.ejs') %>
+<body>
+    <%- include('includes/header.ejs') %>
+    
+    <div class="container-fluid">
+      <div class="px-lg-5">
+        <h1 class="text-center fw-bold">Agregar Nuevo Heroe</h1>
+        <br>
+        <form action="/add" method="POST"  enctype="multipart/form-data">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+          <%- include('includes/FormContent.ejs') %>
+          <br>
+          <div class="row">
+              <div class="col-auto">
+                  <button type="submit" class="btn btn-dark mb-3">Enviar Datos</button>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>
